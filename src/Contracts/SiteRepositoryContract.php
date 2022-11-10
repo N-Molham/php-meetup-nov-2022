@@ -3,9 +3,9 @@
 namespace App\Contracts;
 
 /**
- * Decorator: a structural pattern that allows adding new behaviors to objects dynamically by placing them inside special wrapper objects, called decorators.
+ * Object interfaces allow you to create code which specifies which methods a class must implement, without having to define how these methods are implemented.
  *
- * @link https://refactoring.guru/design-patterns/decorator/php/example#lang-features
+ * @link https://www.php.net/manual/en/language.oop5.interfaces.php
  */
 interface SiteRepositoryContract
 {

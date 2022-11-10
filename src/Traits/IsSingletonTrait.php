@@ -48,4 +48,14 @@ trait IsSingletonTrait
     {
         static::$instance = null;
     }
+
+    /**
+     * Prevent cloning
+     *
+     * @return void
+     */
+    protected function __clone()
+    {
+        // do nothing
+    }
 }

@@ -8,7 +8,7 @@ use App\Models\Store;
 use App\Traits\IsSingletonTrait;
 
 /**
- * A behavioral design pattern that allows you to define a skeleton of an algorithm in a base class and let subclasses override the steps without changing the overall algorithm’s structure.
+ * Template method: a behavioral design pattern that allows you to define a skeleton of an algorithm in a base class and let subclasses override the steps without changing the overall algorithm’s structure.
  *
  * @link https://refactoring.guru/design-patterns/template-method/php/example#lang-features
  */

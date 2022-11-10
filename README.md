@@ -1,8 +1,8 @@
 # Most Common Design Patterns
 
-1. Repository & Decorator
+1. Repository & Contracts
    - https://www.developer.com/design/the-repository-pattern-in-php/
-   - https://refactoring.guru/design-patterns/decorator/php/example#lang-features
+   - https://www.php.net/manual/en/language.oop5.interfaces.php
 2. Adapter & Model 
    - https://refactoring.guru/design-patterns/adapter
    - https://www.geeksforgeeks.org/mvc-design-pattern/

@@ -1,6 +1,5 @@
 <?php
 
-use App\Factories\SiteRepositoryFactory;
 use App\Repositories\SiteRepository;
 use Dotenv\Dotenv;
 
@@ -14,13 +13,11 @@ $dotenv->load();
 
 /**
  * 1. Repository & Decorator
- * 2. Adapter & Model
- * 3. Factory
+ * 2. Factory
+ * 3. Adapter & Model
  */
 
 $siteRepository = new SiteRepository();
 
-//$siteRepository = SiteRepositoryFactory::getRepository();
-
-dump($siteRepository->name());
-dump($siteRepository->store());
+var_dump($siteRepository->name());
+var_dump($siteRepository->store());
