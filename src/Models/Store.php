@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Contracts\CurrencyContract;
 use App\Contracts\StoreContract;
 
 /**
@@ -11,8 +12,11 @@ use App\Contracts\StoreContract;
  */
 class Store implements StoreContract
 {
-    public function __construct(protected string $country, protected string $currency)
-    {
+    public function __construct(
+        protected string $country,
+        protected CurrencyContract $currency,
+        protected string $tax
+    ) {
     }
 
     public function getLocation() : string
@@ -20,8 +24,13 @@ class Store implements StoreContract
         return $this->country;
     }
 
-    public function getCurrency() : string
+    public function getCurrency() : CurrencyContract
     {
         return $this->currency;
+    }
+
+    public function getTax() : string
+    {
+        return $this->tax;
     }
 }

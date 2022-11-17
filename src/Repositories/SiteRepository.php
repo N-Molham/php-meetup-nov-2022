@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Adapters\StoreAdapter;
 use App\Contracts\SiteRepositoryContract;
 use App\Models\Store;
 use App\Traits\IsSingletonTrait;
@@ -22,6 +23,6 @@ class SiteRepository implements SiteRepositoryContract
 
     public function store() : Store
     {
-        return new Store($_ENV['STORE_LOCATION'] ?? '', $_ENV['STORE_CURRENCY'] ?? '');
+        return (new StoreAdapter($_ENV))->convertFromSource();
     }
 }

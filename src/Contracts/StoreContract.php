@@ -6,5 +6,7 @@ interface StoreContract
 {
     public function getLocation() : string;
 
-    public function getCurrency() : string;
+    public function getCurrency() : CurrencyContract;
+
+    public function getTax() : string;
 }

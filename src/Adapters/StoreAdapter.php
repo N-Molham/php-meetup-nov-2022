@@ -19,7 +19,7 @@ class StoreAdapter implements StoreAdapterContract
 
     public function convertFromSource() : StoreContract
     {
-        return new Store($this->data['STORE_LOCATION'] ?? '', $this->data['STORE_CURRENCY'] ?? '');
+        return new Store($this->data['STORE_LOCATION'] ?? '', (new CurrencyAdapter($this->data))->convertFromSource(), $_ENV['STORE_TAX'] ?? '');
     }
 
     public function convertToSource(StoreContract $store) : array

@@ -33,7 +33,7 @@ trait IsSingletonTrait
     public static function getInstance() : static
     {
         if (! static::isLoaded()) {
-            static::$instance = new self();
+            static::$instance = new static();
         }
 
         return static::$instance;

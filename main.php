@@ -17,7 +17,9 @@ $dotenv->load();
  * 3. Adapter & Model
  */
 
-$siteRepository = new SiteRepository();
+$siteRepository = \App\Factories\SiteRepositoryFactory::getInstance()->getRepository();
 
 var_dump($siteRepository->name());
-var_dump($siteRepository->store());
+var_dump($siteRepository->store()->getCurrency());
+var_dump($siteRepository->store()->getLocation());
+var_dump($siteRepository->store()->getTax());

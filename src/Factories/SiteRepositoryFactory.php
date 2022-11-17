@@ -16,7 +16,7 @@ class SiteRepositoryFactory implements SiteRepositoryFactoryContract
 {
     use IsSingletonTrait;
 
-    public static function getRepository() : SiteRepositoryContract
+    public function getRepository() : SiteRepositoryContract
     {
         $repositoryClass = $_ENV['SITE_REPOSITORY'] ?? null;
 
